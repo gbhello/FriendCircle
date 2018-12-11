@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_personal_centre_layout_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/image_go" />
+
+        <TextView
+            android:id="@+id/tv_personal_centre_layout_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
+            android:text="小撒"
+            android:textColor="#125641"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_personal_centre_layout_textcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_personal_centre_layout_username"
+            android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
+            android:maxLines="2"
+            android:text="北大还行"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_personal_centre_layout_imagecontent"
+            android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
+            android:layout_marginTop="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/pekinguniversity" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
