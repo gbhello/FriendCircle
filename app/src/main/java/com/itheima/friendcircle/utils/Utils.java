@@ -1,5 +1,9 @@
 package com.itheima.friendcircle.utils;
 
+import android.content.Context;
+import android.content.Intent;
+import android.widget.Toast;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,11 +16,12 @@ public class Utils {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         int len = -1;
         byte[] buffer = new byte[1024];
-        while((len = inputStream.read(buffer))!=-1){
-            byteArrayOutputStream.write(buffer,0,len);
+        while ((len = inputStream.read(buffer)) != -1) {
+            byteArrayOutputStream.write(buffer, 0, len);
         }
         inputStream.close();
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         return new String(byteArray);
     }
+
 }

@@ -98,6 +98,7 @@
             />
     </RelativeLayout>
     <Button
+        android:id="@+id/bt_signin_sign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="注册"

@@ -8,18 +8,18 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <ImageView
+        <com.loopj.android.image.SmartImageView
             android:id="@+id/iv_personal_centre_layout_avatar"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/image_go" />
+            />
 
         <TextView
             android:id="@+id/tv_personal_centre_layout_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
-            android:text="小撒"
             android:textColor="#125641"
             android:textSize="20sp" />
 
@@ -29,19 +29,19 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_personal_centre_layout_username"
             android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
-            android:maxLines="2"
-            android:text="北大还行"
+            android:maxLines="4"
             android:textSize="15sp" />
 
-        <ImageView
+        <com.loopj.android.image.SmartImageView
             android:id="@+id/iv_personal_centre_layout_imagecontent"
             android:layout_toRightOf="@+id/iv_personal_centre_layout_avatar"
             android:layout_marginTop="80dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/pekinguniversity" />
+            />
 
     </RelativeLayout>
+
 
 
 </RelativeLayout>

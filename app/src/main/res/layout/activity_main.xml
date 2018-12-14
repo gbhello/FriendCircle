@@ -14,7 +14,7 @@
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="#C0FF3E" />
+        android:background="@drawable/avatar" />
 
     <EditText
         android:id="@+id/et_login_username"

@@ -26,6 +26,14 @@
             android:name=".PersonalCentreActivity"
             android:label="@string/title_activity_personal_centre" >
         </activity>
+        <activity
+            android:name=".PersonalCentreEditActivity"
+            android:label="@string/title_activity_personal_centre_edit" >
+        </activity>
+        <activity
+            android:name=".SigninSuccess"
+            android:label="@string/title_activity_signin_success" >
+        </activity>
     </application>
 
 </manifest>
