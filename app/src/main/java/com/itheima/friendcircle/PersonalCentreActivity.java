@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.itheima.friendcircle.bean.Item;
+import com.itheima.friendcircle.httphelp.HttpHelp;
+import com.itheima.friendcircle.httphelp.HttpMethod;
 import com.loopj.android.image.SmartImageView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -35,8 +37,6 @@ public class PersonalCentreActivity extends Activity implements View.OnClickList
     private ArrayList<Item> messageList = new ArrayList<Item>(); //消息集合
 
     private PersonalCentreAdapter personalCentreAdapter;
-
-    private String path = "http://192.168.19.1:8080/FriendCircle.xml";
 
     private Handler handler = new Handler() {
         @Override
@@ -74,10 +74,10 @@ public class PersonalCentreActivity extends Activity implements View.OnClickList
             public void run() {
 
                 try {
-                    URL url = new URL(path);
+                    URL url = new URL(HttpHelp.listViewPath);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setConnectTimeout(10000);
-                    connection.setRequestMethod("GET");
+                    connection.setRequestMethod(String.valueOf(HttpMethod.GET));
 
                     //获取响应码，检查连接状态
                     int responseCode = connection.getResponseCode();

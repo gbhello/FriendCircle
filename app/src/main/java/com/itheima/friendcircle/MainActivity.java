@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.itheima.friendcircle.httphelp.HttpHelp;
+import com.itheima.friendcircle.httphelp.HttpMethod;
 import com.itheima.friendcircle.utils.Utils;
 
 import java.io.InputStream;
@@ -21,7 +23,6 @@ import java.security.Policy;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    String path = "http://192.168.19.1:8080/Login/LoginServlet";
     private EditText et_login_username;
     private EditText et_login_password;
     private Button bt_login;
@@ -56,9 +57,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         //解决用户名或者是密码中包含中文乱码问题
                         String params = "username=" + URLEncoder.encode(username,"utf-8") + "&password=" + URLEncoder.encode(password,"utf-8");
 
-                        URL url = new URL(path);
+                        URL url = new URL(HttpHelp.loginPath);
                         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                        connection.setRequestMethod("POST");
+                        connection.setRequestMethod(String.valueOf(HttpMethod.POST));
                         connection.setConnectTimeout(10000);
 
                         //设置和post请求相关的请求头
