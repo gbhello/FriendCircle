@@ -76,9 +76,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             InputStream inputStream = connection.getInputStream();
                             String result = Utils.getStringFromStream(inputStream);
                             showToast(result);
-                            //登录验证成功，跳转到朋友圈页面
-                            Intent intent_personalCentre = new Intent(MainActivity.this, PersonalCentreActivity.class);
-                            startActivity(intent_personalCentre);
+                            if(result.equals("登录成功")){
+                                //登录验证成功，跳转到朋友圈页面
+                                Intent intent_personalCentre = new Intent(MainActivity.this, PersonalCentreActivity.class);
+                                startActivity(intent_personalCentre);
+                            }
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

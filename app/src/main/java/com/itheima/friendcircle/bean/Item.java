@@ -11,4 +11,14 @@ public class Item {
     public String username;
     public String description;
     public String descriptionimage;
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "avatar='" + avatar + '\'' +
+                ", username='" + username + '\'' +
+                ", description='" + description + '\'' +
+                ", descriptionimage='" + descriptionimage + '\'' +
+                '}';
+    }
 }

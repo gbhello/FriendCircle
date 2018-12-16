@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_login_username"
         android:gravity="center"
+        android:password="true"
         android:hint="请输入密码" />
 
     <Button
